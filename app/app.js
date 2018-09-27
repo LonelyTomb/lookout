@@ -8,6 +8,7 @@ import DocsContainer from './containers/DocsContainer'
 import DocContainer from './containers/DocContainer'
 import EditDocContainer from './containers/EditDocContainer'
 import QueryContainer from './containers/QueryContainer'
+import SearchContainer from './containers/SearchContainer'
 import Nav from './components/Nav'
 import Login from './components/Login'
 import Loading from './components/Loading'
@@ -56,6 +57,7 @@ class UserRoutes extends Component {
           <div className='page'>
             <Switch>
               <Route path='/:couch/:dbName/editing/:docId' component={withParams(EditDocContainer)} />
+              <Route exact path='/:couch/:dbName/search' component={withParams(SearchContainer)} />
               <Route exact path='/:couch/:dbName/query' component={withParams(QueryContainer)} />
               <Route path='/:couch/:dbName/query/:queryId' component={withParams(QueryContainer)} />
               <Route path='/:couch/:dbName/:docId/:rev/' component={withParams(DocContainer)} />

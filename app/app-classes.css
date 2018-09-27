@@ -33,3 +33,7 @@
 .warning-modal {
   background-color: red;
 }
+
+.search-modal {
+  height: 80%;
+}
